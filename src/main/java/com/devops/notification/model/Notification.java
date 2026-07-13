@@ -1,11 +1,9 @@
 package com.devops.notification.model;
 
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
-@Data
 @Document(collection = "notifications")
 public class Notification {
     @Id
@@ -31,4 +29,6 @@ public class Notification {
     public void setRead(boolean read) { isRead = read; }
     public Date getTimestamp() { return timestamp; }
     public void setTimestamp(Date timestamp) { this.timestamp = timestamp; }
+    public boolean isIsRead() { return isRead; }
+    public void setIsRead(boolean isRead) { this.isRead = isRead; }
 }
